@@ -2,39 +2,46 @@ public class Circle {
     private double radius;
     private String color;
 
+    // Constructor default
     public Circle() {
         radius = 1.0;
         color = "red";
     }
 
-    public Circle(double r) {
-        radius = r;
+    // Constructor radius
+    public Circle(double radius) {
+        this.radius = radius;
         color = "red";
     }
 
-    // baru: constructor dengan radius dan color
-    public Circle(double r, String c) {
-        radius = r;
-        color = c;
+    // Task 1.1
+    // Constructor radius dan color
+    public Circle(double radius, String color) {
+        this.radius = radius;
+        this.color = color;
     }
 
+    // Getter radius
     public double getRadius() {
         return radius;
     }
 
-    // baru: getter dan setter color
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String c) {
-        color = c;
-    }
-
+    // Menghitung luas lingkaran
     public double getArea() {
         return radius * radius * Math.PI;
     }
 
+    // Getter color
+    public String getColor() {
+        return color;
+    }
+
+    // Setter color
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    @Override
     public String toString() {
         return "Circle[radius=" + radius + " color=" + color + "]";
     }
