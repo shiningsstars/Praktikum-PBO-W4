@@ -1,129 +1,68 @@
 public class TestShape {
 
     public static void main(String[] args) {
+        // Shape
+        printShape(new Shape());
+        printShape(new Shape("yellow", false));
 
-        // =========================
-        // TEST SHAPE
-        // =========================
+        // Circle
+        printCircle(new Circle());
+        printCircle(new Circle(2.0));
+        printCircle(new Circle(3.0, "red", true));
 
-        Shape s1 = new Shape();
+        // Rectangle
+        printRectangle(new Rectangle());
+        printRectangle(new Rectangle(2.0, 4.0));
+        printRectangle(new Rectangle(3.0, 5.0, "blue", false));
 
-        System.out.println("===== SHAPE =====");
-        System.out.println(s1);
-        System.out.println("Color  : " + s1.getColor());
-        System.out.println("Filled : " + s1.isFilled());
+        // Square
+        printSquare(new Square());
+        printSquare(new Square(4.0));
 
-        s1.setColor("blue");
-        s1.setFilled(false);
+        Square sq = new Square(5.0, "purple", true);
+        printSquare(sq);
 
-        System.out.println("\nSetelah setter:");
-        System.out.println(s1);
+        // Ubah width, length ikut berubah
+        sq.setWidth(6.0);
+        System.out.println("Square: width=" + sq.getWidth()
+                + " length=" + sq.getLength());
 
-        Shape s2 = new Shape("yellow", false);
+        // Ubah length, width ikut berubah
+        sq.setLength(8.0);
+        System.out.println("Square: width=" + sq.getWidth()
+                + " length=" + sq.getLength());
+    }
 
-        System.out.println("\nShape 2:");
-        System.out.println(s2);
+    private static void printShape(Shape s) {
+        System.out.println("Shape:"
+                + " color=" + s.getColor()
+                + " filled=" + s.isFilled());
+        System.out.println(s);
+    }
 
+    private static void printCircle(Circle c) {
+        System.out.println("Circle:"
+                + " radius=" + c.getRadius()
+                + " area=" + c.getArea()
+                + " perimeter=" + c.getPerimeter());
+        System.out.println(c);
+    }
 
-        // =========================
-        // TEST CIRCLE
-        // =========================
+    private static void printRectangle(Rectangle r) {
+        System.out.println("Rectangle:"
+                + " width=" + r.getWidth()
+                + " length=" + r.getLength()
+                + " area=" + r.getArea()
+                + " perimeter=" + r.getPerimeter());
+        System.out.println(r);
+    }
 
-        System.out.println("\n===== CIRCLE =====");
-
-        Circle c1 = new Circle();
-
-        System.out.println(c1);
-        System.out.println("Area      : " + c1.getArea());
-        System.out.println("Perimeter : " + c1.getPerimeter());
-
-        Circle c2 = new Circle(2.0);
-
-        System.out.println("\nCircle 2:");
-        System.out.println(c2);
-        System.out.println("Area      : " + c2.getArea());
-        System.out.println("Perimeter : " + c2.getPerimeter());
-
-        Circle c3 = new Circle(3.0, "red", true);
-
-        System.out.println("\nCircle 3:");
-        System.out.println(c3);
-
-        c3.setRadius(4.0);
-
-        System.out.println("Radius setelah setter: "
-                + c3.getRadius());
-
-
-        // =========================
-        // TEST RECTANGLE
-        // =========================
-
-        System.out.println("\n===== RECTANGLE =====");
-
-        Rectangle r1 = new Rectangle();
-
-        System.out.println(r1);
-        System.out.println("Area      : " + r1.getArea());
-        System.out.println("Perimeter : " + r1.getPerimeter());
-
-        Rectangle r2 = new Rectangle(2.0, 4.0);
-
-        System.out.println("\nRectangle 2:");
-        System.out.println(r2);
-        System.out.println("Area      : " + r2.getArea());
-        System.out.println("Perimeter : " + r2.getPerimeter());
-
-        Rectangle r3 =
-                new Rectangle(3.0, 5.0, "blue", false);
-
-        System.out.println("\nRectangle 3:");
-        System.out.println(r3);
-
-        r3.setWidth(6.0);
-        r3.setLength(7.0);
-
-        System.out.println("Setelah setter:");
-        System.out.println(r3);
-
-
-        // =========================
-        // TEST SQUARE
-        // =========================
-
-        System.out.println("\n===== SQUARE =====");
-
-        Square sq1 = new Square();
-
-        System.out.println(sq1);
-        System.out.println("Area      : " + sq1.getArea());
-        System.out.println("Perimeter : " + sq1.getPerimeter());
-
-        Square sq2 = new Square(4.0);
-
-        System.out.println("\nSquare 2:");
-        System.out.println(sq2);
-        System.out.println("Area      : " + sq2.getArea());
-        System.out.println("Perimeter : " + sq2.getPerimeter());
-
-        Square sq3 =
-                new Square(5.0, "purple", true);
-
-        System.out.println("\nSquare 3:");
-        System.out.println(sq3);
-
-        // Test setWidth
-        sq3.setWidth(6.0);
-
-        System.out.println("\nSet width menjadi 6:");
-        System.out.println("Width  : " + sq3.getWidth());
-        System.out.println("Length : " + sq3.getLength());
-
-        // Test setLength
-        sq3.setLength(8.0);
-
-        System.out.println("\nSet length menjadi 8:");
-        System.out.println("Width  : " + sq3.getWidth());
-        System.out.println("Length : " + sq3.getLength());
+    private static void printSquare(Square s) {
+        System.out.println("Square:"
+                + " width=" + s.getWidth()
+                + " length=" + s.getLength()
+                + " area=" + s.getArea()
+                + " perimeter=" + s.getPerimeter());
+        System.out.println(s);
     }
 }
