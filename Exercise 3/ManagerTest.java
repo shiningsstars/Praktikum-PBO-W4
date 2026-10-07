@@ -5,27 +5,27 @@ public class ManagerTest {
         Employee[] staff = new Employee[3];
 
         staff[0] = new Employee(
-                "Hasya Nadana",
-                4000000,
+                "Antonio Rossi",
+                2000000,
                 1,
-                6,
-                2007
+                10,
+                1989
         );
 
         staff[1] = new Manager(
-                "Yoon Jeonghan",
+                "Maria Bianchi",
                 2500000,
                 1,
-                10,
-                1995
+                12,
+                1991
         );
 
         staff[2] = new Employee(
-                "Aoyagi Toya",
-                2700000,
+                "Isabel Vidal",
+                3000000,
                 1,
                 11,
-                1997
+                1993
         );
 
         // Semua employee naik salary 5%

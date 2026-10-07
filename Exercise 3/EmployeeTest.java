@@ -5,23 +5,30 @@ public class EmployeeTest {
         Employee[] staff = new Employee[3];
 
         staff[0] = new Employee(
-            "Hasya Nadana",
-            4000000,
-            1, 6, 2007
+                "Antonio Rossi",
+                2000000,
+                1,
+                10,
+                1989
         );
 
         staff[1] = new Employee(
-            "Yoon Jeonghan",
-            2500000,
-            1, 10, 1995
+                "Maria Bianchi",
+                2500000,
+                1,
+                12,
+                1991
         );
 
         staff[2] = new Employee(
-            "Aoyagi Toya",
-            2700000,
-            1, 11, 1997
+                "Isabel Vidal",
+                3000000,
+                1,
+                11,
+                1993
         );
 
+        // Naikkan salary 5%
         for (int i = 0; i < 3; i++) {
             staff[i].raiseSalary(5);
         }
@@ -32,6 +39,7 @@ public class EmployeeTest {
             staff[i].print();
         }
 
+        // Sorting berdasarkan salary
         Sortable.shell_sort(staff);
 
         System.out.println("\nSetelah sorting:");
